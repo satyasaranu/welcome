@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    def mvnHome
+    
     tools {
         maven 'maven-3.6.0'
     }
@@ -8,7 +8,6 @@ pipeline {
         stage(pullgit) {
             steps {
             git 'https://github.com/satyasaranu/welcome.git'
-            mvnHome = tool 'maven-3.6.0'
             }
         }
         
